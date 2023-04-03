@@ -33,7 +33,7 @@ export default function AddOns() {
                         <Typography>
                             Add ons help you enhance your gaming experience
                         </Typography>
-                        <Card sx={{ width:"70%", marginTop:'40px' }}>
+                        <Card sx={{ width:"100%", marginTop:'40px' }}>
                         <CardContent sx={{display:'flex', justifyContent:'space-between'}}>
                         <Checkbox {...label}  />
                         <Typography style={{marginLeft:'10px'}}>
@@ -47,7 +47,7 @@ export default function AddOns() {
                         </CardContent>
 
                         </Card>
-                        <Card sx={{ width:"70%", marginTop:'10%' }}>
+                        <Card sx={{ width:"100%", marginTop:'10%' }}>
                         <CardContent sx={{display:'flex', justifyContent:'space-between'}}>
                         <Checkbox {...label}  />
                         <Typography style={{marginLeft:'10px'}}>
@@ -60,7 +60,7 @@ export default function AddOns() {
                         </CardContent>
 
                         </Card>
-                        <Card sx={{ width:"70%", marginTop:'10%' }}>
+                        <Card sx={{ width:"100%", marginTop:'10%' }}>
                         <CardContent sx={{display:'flex', justifyContent:'space-between'}}>
                         <Checkbox {...label}  />
                         <Typography style={{marginLeft:'10px'}}>

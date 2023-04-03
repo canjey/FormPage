@@ -27,7 +27,7 @@ export default function PlanInfo() {
                         <Typography>
                             You have the option of monthly and yearly billing
                         </Typography>
-                        <Card sx={{ width:"60%", marginTop:'40px' }}>
+                        <Card sx={{ width:"100%", marginTop:'40px' }}>
                         <CardContent sx={{display:'flex'}}>
                         <img src={Arcade} />
                             <Typography>
@@ -40,7 +40,7 @@ export default function PlanInfo() {
                         </CardContent>
 
                         </Card>
-                        <Card sx={{ width:"60%", marginTop:'10%' }}>
+                        <Card sx={{ width:"100%", marginTop:'10%' }}>
                         <CardContent sx={{display:'flex'}}>
                         <img src={Advanced} />
 
@@ -51,7 +51,7 @@ export default function PlanInfo() {
                         </CardContent>
 
                         </Card>
-                        <Card sx={{ width:"60%", marginTop:'10%' }}>
+                        <Card sx={{ width:"100%", marginTop:'10%' }}>
                         <CardContent sx={{display:'flex'}}>
                         <img src={Pro} />
 
