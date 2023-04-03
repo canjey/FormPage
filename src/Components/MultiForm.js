@@ -7,6 +7,10 @@ import Box from '@mui/material/Box';
 import PersonalInfo from './PersonalInfo';
 import LooksOneRoundedIcon from '@mui/icons-material/LooksOneRounded';
 import image from "../assets/images/bg-sidebar-mobile.svg"
+import PlanInfo from './PlanInfo';
+import AddOns from './AddOns';
+import Summary from './Summary';
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -56,16 +60,20 @@ export default function MultiForm() {
           <Tab label="1" {...a11yProps(0)} />
           <Tab label="2" {...a11yProps(1)} />
           <Tab label="3" {...a11yProps(2)} />
+          <Tab label="4" {...a11yProps(3)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
         <PersonalInfo  />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <PlanInfo />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <AddOns />
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <Summary />
       </TabPanel>
     </Box>
   );
