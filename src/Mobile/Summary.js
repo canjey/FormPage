@@ -6,6 +6,10 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
+import {List, ListItemButton, ListItemText} from "@mui/material";
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'  
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ReceiptIcon from '@mui/icons-material/Receipt';
 
 
 
@@ -28,6 +32,46 @@ export default function Summary() {
                         <div style={{marginTop:'20px'}}>
                             <Typography variant="p"> Double Check Everything looks okay before confirming</Typography>
                         </div>
+                        <List
+            sx={{marginX: '0.5rem', backgroundColor:'#F0f0F0'}}
+            component="nav"
+            aria-labelledby="site-menu"
+          >
+           
+            <ListItemButton sx={{borderRadius: "0.5rem", marginBottom: '0.5rem'}}>
+              <ListItemIcon sx={{color: "#fefefe"}}>
+              </ListItemIcon>
+              <ListItemText sx={{color:'black'}} primary="Arcade Monthly"/>
+              <ListItemText sx={{color:'gray'}} primary="$9/mo"/>
+
+            </ListItemButton>
+            
+            <ListItemButton sx={{borderRadius: "0.5rem", marginBottom: '0.5rem'}}>
+              <ListItemIcon sx={{color: "#fefefe"}}>
+              </ListItemIcon>
+              <ListItemText sx={{color:'gray'}} primary="Online Service"/>
+              <ListItemText sx={{color:'gray'}} primary="$9/mo"/>
+            </ListItemButton>
+            
+            
+            <ListItemButton sx={{borderRadius: "0.5rem", marginBottom: '0.5rem'}}>
+              <ListItemIcon sx={{color: "#fefefe"}}>
+              </ListItemIcon>
+              <ListItemText sx={{color:'gray'}} primary="Larger Storage"/>
+              <ListItemText  sx={{color:'gray'}} primary="$9/mo"/>
+              
+            </ListItemButton>
+           
+          </List>
+          <List>
+            <ListItemButton sx={{borderRadius: "0.5rem", marginBottom: '0.5rem'}}>
+              <ListItemIcon sx={{color: "#fefefe"}}>
+              </ListItemIcon>
+              <ListItemText sx={{color:'gray'}} primary="Total (per month)"/>
+              <ListItemText  sx={{color:'gray'}} primary="$12/mo"/>
+              
+            </ListItemButton>
+         </List>
                        
 
 

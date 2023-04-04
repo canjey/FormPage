@@ -5,15 +5,32 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { actions } from "../store/users";
+import { updateFormData } from "../store/users/slice";
+
+export default function PersonalInfo({ setActiveTab }) {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const dispatch = useDispatch();
 
 
-export default function PersonalInfo() {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(updateFormData({ name, email, phone }));
+        setActiveTab(2);
+      }; 
+    
     return (
         <>
             <Box
-                component="form"
+                component="form" 
                 autoComplete="off"
                 validate
+                
+                onSubmit={handleSubmit}
                 sx={{ padding: '10%', marginTop: '-150px',  }}
             >
                 <Box >
@@ -32,7 +49,9 @@ export default function PersonalInfo() {
                                 required
                                 id="outlined-search"
                                 placeholder="e.g Stephen King"
-                                type="text" />
+                                type="text" 
+                                onChange={(e) => setName(e.target.value)}
+                                />
                         </div>
                         <div style={{marginTop:'20px'}}>
                             <Typography>Email Address</Typography>
@@ -41,6 +60,7 @@ export default function PersonalInfo() {
                                 fullWidth
                                 id="outlined-search"
                                 placeholder="e.g StephenKing@lorm.com"
+                                onChange={(e) => setEmail(e.target.value)}
                                 type="email" />
                         </div>
                         <div style={{marginTop:'20px'}}>
@@ -50,6 +70,7 @@ export default function PersonalInfo() {
                                 fullWidth
                                 id="outlined-search"
                                 placeholder="e.g +123 456 7890"
+                                onChange={(e) => setPhone(e.target.value)}
                                 type="phone " />
                         </div>
 

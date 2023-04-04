@@ -44,7 +44,7 @@ function a11yProps(index) {
   };
 }
 
-export default function MultiForm() {
+export default function MobileMultiStepForm() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -54,13 +54,10 @@ export default function MultiForm() {
   return (
     <Box sx={{ width: '100%', }}>
       
-      <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor:'blue', backgroundImage:{image}, height:'150px' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider',  backgroundImage:`url("../assets/images/bg-sidebar-mobile.svg")`,  backgroundRepeat: "no-repeat", backgroundSize: 'cover', height:'150px' }}>
       {/* <img src={image} /> */}
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" sx={{paddingTop:'20px', paddingLeft:'30%'}}>
-          <Tab label="1" {...a11yProps(0)} />
-          <Tab label="2" {...a11yProps(1)} />
-          <Tab label="3" {...a11yProps(2)} />
-          <Tab label="4" {...a11yProps(3)} />
+         
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
